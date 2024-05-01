@@ -1,0 +1,138 @@
+/* Estilos Globales */
+:root{
+   --primary-color: #5e343e;
+   --secondary-color: #5c4f58;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   width: 80%;
+   margin: 0 auto;
+   text-align: center;
+}
+
+header {
+   position: sticky;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 9999;
+   background-color: #5e343e; /* Color: Burdeos */
+   color: #fff;
+   padding: 20px 0;
+}
+
+header nav ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+header nav ul li {
+   display: inline;
+   margin-inline-start: 80px;
+}
+
+header nav ul li a {
+   color: #fff;
+   text-decoration: none;
+}
+.volver {
+   text-align: center;
+}
+
+header .img-logo1 {
+   float: right;
+}
+
+header .img-logo2 {
+   float: left;
+}
+#bottle-wine:hover {
+   animation: rotation-bottle-wine 0.5s infinite
+}
+@keyframes rotation-bottle-wine {
+   0% { transform: rotate(0deg);}
+   50% { transform: rotate(-75deg);}
+   100% { transform: rotate(0deg);}
+}
+#coupe-wine:hover {
+   animation: rotation-coupe-wine 0.5s infinite
+}
+@keyframes rotation-coupe-wine {
+   0% { transform: rotate(0deg);}
+   50% { transform: rotate(15deg);}
+   75% { transform: rotate(0deg);}
+   100% { transform: rotate(-15deg);}
+}
+/* Estilos de la Página de Inicio */
+.destacados {
+   padding: 50px 0;
+}
+
+.busqueda {
+   padding: 20px 0;
+   border: 5px solid color black;
+}
+
+/* Estilos página Contenido */
+
+
+
+/* Estilos de la Página de Detalle del Vino Seleccionado - esta página la armé aparte y se llama búsqueda */
+.detalle-vino {
+   padding: 50px 0;
+}
+
+.detalle-vino h2 {
+   text-align: left;
+   margin-bottom: 30px;
+}
+
+.vino {
+   display: flex;
+   align-items: center;
+}
+
+.vino img {
+   max-width: 300px;
+   margin-right: 20px;
+}
+
+.informacion {
+   flex: 1;
+}
+
+.informacion h3,h4 {
+   margin-top: 0;
+   text-align: left;
+}
+
+.informacion p {
+   margin: 10px 0;
+   text-align: left;
+}
+
+.vinos-grid {
+   background-color:#5c4f58;
+   height: 400px;
+   display: grid;
+   grid-template-columns: repeat(4, 2fr);
+   grid-template-rows: 2fr;
+   text-align: center;
+   justify-content: center;
+}
+
+footer {
+   background-color: #5e343e; /* Color: Burdeos */
+   color: #fff;
+   padding: 20px 0;
+   text-align: center;
+}
+
+

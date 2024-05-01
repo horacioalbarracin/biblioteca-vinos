@@ -1,0 +1,14 @@
+master-top-btn-container {
+   width: auto;
+   float: left;
+}
+
+.icon-homeBanking {
+   background: url( /static/img/acceso.png) 0 0 repeat-x;
+   display: block;
+   background-size: 16px;
+   width: 16px;
+   height: 22px;
+   float: left;
+   margin: 5px 7px;
+}

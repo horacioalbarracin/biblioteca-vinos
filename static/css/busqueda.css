@@ -1,0 +1,47 @@
+/* body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header,
+footer {
+    background-color: #5e343e; */
+    /* Color: Burdeos */
+    /* color: #fff;
+    padding: 20px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.more-info{
+    height: 400px;
+}
+.vinos-grid {
+    background-color:#5c4f58;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: 2fr;
+    text-align: center;
+    justify-content: center;
+}
+ */
