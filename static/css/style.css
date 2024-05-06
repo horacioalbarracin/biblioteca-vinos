@@ -1,51 +1,116 @@
 /* Estilos Globales */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos adicionales aquí */
+
 :root{
    --primary-color: #5e343e;
    --secondary-color: #5c4f58;
 }
 
 body {
-   font-family: 'Roboto', sans-serif;
+   
    margin: 0;
    padding: 0;
+   background-color: #ffffff; 
+   color: #000000; 
+   font-family: 'open sans';
 }
 
-.container {
-   width: 80%;
-   margin: 0 auto;
-   text-align: center;
-}
-
-header {
-   position: sticky;
-   top: 0;
-   left: 0;
+header{
    width: 100%;
-   z-index: 9999;
-   background-color: #5e343e; /* Color: Burdeos */
+   height: 600px;
+   background: #42275a;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #734b6d79, #42275a6e), url(../img/viñedo\ en\ alta\ calidad.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #734b6d79, #42275a6e), url(../img/viñedo\ en\ alta\ calidad.jpg);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background-size: cover;
+   background-attachment: fixed;
+   position: relative;
+}
+
+.navegacion{
+   text-align: right;
+   padding: 30px 50px 0 0; 
+
+}
+
+.navegacion > a{
    color: #fff;
-   padding: 20px 0;
-}
-
-header nav ul {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-}
-
-header nav ul li {
-   display: inline;
-   margin-inline-start: 80px;
-}
-
-header nav ul li a {
-   color: #fff;
+   font-weight: 300;
    text-decoration: none;
-}
-.volver {
-   text-align: center;
+   margin-right: 10px;
 }
 
+.navegacion > a:hover{
+   text-decoration: underline;
+}
+
+.wave{
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   
+}
+
+
+.logo {
+      width: 300px; 
+      position: relative;
+      margin-right: 10px; 
+  }
+
+  header .textos-header{
+   display: flex;
+   height: 430px;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+
+  }
+
+  .textos-header h1{
+   font-size: 50px;
+   color: #fff;   
+  }
+
+  .textos-header h2{
+   font-size: 30px;
+   font-weight: 100;
+   color: #fff;
+   margin-top: 1px;
+   
+  }
+
+h1 {
+   font-family: 'Roboto', sans-serif;
+   /* Puedes ajustar el tamaño, el peso y otros estilos según sea necesario */
+   font-size: 2em;
+   font-weight: bold;
+}
+
+.contenedor {
+   width: 80%;
+   margin: auto;
+   display: flex;
+   align-items: center;
+   padding: 60px 0;
+   width: 90%;
+   max-width: 1000px;
+   overflow: hidden;
+
+}
+
+.titulo{
+   color: #622a73;
+   font-size: 30px;
+   text-align: center;
+   margin-bottom: 60px;
+
+}
+/******************************************/
+/*****************************************/
 header .img-logo1 {
    float: right;
 }
