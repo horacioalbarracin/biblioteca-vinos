@@ -57,3 +57,6 @@ body {
 .resultados {
    padding: 20px 0;
 }
+.error-text {
+   color: red; /* Color rojo para el texto de error */
+}
