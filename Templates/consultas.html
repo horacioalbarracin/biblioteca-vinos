@@ -48,7 +48,7 @@
     <main>
         <section class="registro">
 
-            <h2> CREAR UNA CUENTA</h2>
+            <h2> CONSULTAS</h2>
             <br>
             <br>
             <form action="#" id="formRegister" method="GET" novalidate>
@@ -63,36 +63,13 @@
                     <br>
                     <input type="text" required name="lastname" id="lastname" maxlength="4" minlength="2">
                 </div>
-                <div class="error" id="error-lastname"></div>
-                <div class="form-control">
-                    <label>Email</label>
-                    <br>
-                    <input type="email" required name="email" id="email">
-                </div>
-                <div class="error" id="error-email"></div>
-                <div class="form-control">
-                    <label>Contaseña</label>
-                    <br>
-                    <input type="password" required name="password" id="password">
-                </div>
-                <div class="error" id="error-password"></div>
-                <div class="form-control">
-                    <label for="birthdate">Fecha de Nacimiento</label>
-                    <br>
-                    <input type="date" required name="birthdate" id="birthdate">
-                </div>
-                <div class="form-control">
-                    <label>País</label>
-                    <br>
-                    <input type="country" name="country" id="country">
-                </div>
                 <br>
-                <div class="form-terms">
-                    <input type="radio" id="terms" name="terms">
-                    <label for="terms">Acepto términos y condiciones</label>
+                <div class="form-control" method="post">
+                    <label for="consulta">Escribe tu consulta:</label><br>
+                    <textarea id="consulta" name="consulta" rows="8" cols="50"></textarea><br><br>
+                    <input type="submit" value="Enviar Consulta">
                 </div>
-                <br>
-                <button type="submit" class="btn-send">Registrarse</button>
+                
             </form>
 
         </section>
