@@ -1,6 +1,6 @@
 /* Estilos Globales */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 /* Estilos adicionales aquí */
 
 :root{
@@ -200,8 +200,131 @@ header .img-logo2 {
 footer {
    background-color: #5e343e; /* Color: Burdeos */
    color: #fff;
-   padding: 20px 0;
+   padding: 20px 0px;
    text-align: center;
 }
 
 
+/* footer */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+} */
+/*:::::Pie de Pagina*/
+.pie-pagina{
+    width: 100%;
+    background-color: #5e343e;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.box p > a{
+   color: #fff;
+   font-weight: 300;
+   text-decoration: none;
+   margin-right: 10px;
+}
+
+.box p > a:hover{
+   text-decoration: underline;
+}
+/*
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}*/
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+i{
+   text-align: center;
+   font-size: 25px;
+   color: #f5f1f1;
+   margin: 10px;
+   border-radius: 50%;
+   padding: 15px;
+   box-shadow: 0px 5px 10px rgb(0, 0, 0, .35);
+   transition: .3s ease;
+}
+
+.fa-youtube:hover {
+   background-color: red;
+   color: #ffffff;
+   box-shadow: 0 0 15px red,
+               0 0 45px red,
+               0 0 75px red,
+               0 0 115 red;
+}
+
+.fa-twitter:hover {
+   background-color: #1DA1F2;
+   color: #ffffff;
+   box-shadow: 0 0 15px #1DA1F2,
+               0 0 45px #1DA1F2,
+               0 0 75px #1DA1F2,
+               0 0 115 #1DA1F2;
+}
+
+.fa-instagram:hover {
+   background-color: #FF3E00;
+   color: #ffffff;
+   box-shadow: 0 0 15px #FF3E00,
+               0 0 45px #FF3E00,
+               0 0 75px #FF3E00,
+               0 0 115 #FF3E00;
+}
+
+.fa-facebook:hover {
+   background-color: #0575bb;
+   color: #ffffff;
+   box-shadow: 0 0 15px #0575bb,
+               0 0 45px #0575bb,
+               0 0 75px #0575bb,
+               0 0 115 #0575bb;
+}
