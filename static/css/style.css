@@ -101,7 +101,9 @@ h1 {
    overflow: hidden;
 
 }
-
+.container{
+   margin: 100px;
+}
 .titulo{
    color: #622a73;
    font-size: 30px;
@@ -200,7 +202,7 @@ header .img-logo2 {
 footer {
    background-color: #5e343e; /* Color: Burdeos */
    color: #fff;
-   padding: 20px 0px;
+   padding: 20px 20px;
    text-align: center;
 }
 
