@@ -31,7 +31,19 @@ body {
 
 .form-control input {
    height: 100%;
-   width: 50%;
+   width: 80%;
+   background: var(--select-background-color);
+   border: 2px solid white;
+   outline: none;
+   border-radius: 25px;
+   color: #fff;
+   font-size: 1rem;
+   padding: 20px 20px;
+}
+
+.form-control select {
+   height: 100%;
+   width: 80%;
    background: var(--select-background-color);
    border: 2px solid white;
    outline: none;

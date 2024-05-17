@@ -63,6 +63,16 @@
                 </div>
                 <div class="error" id="error-lastname"></div>
                 <div class="form-control">
+                    <label>Sexo</label>
+                    <br>
+                    <select name="sexo" id="sexo">
+                        <option value="mercedes">Prefiero No decirlo</option>
+                        <option value="F">Femenino</option>
+                        <option value="M">Masculino</option>
+                    </select>
+                </div>
+                <div class="error" id="error-sexo"></div>
+                <div class="form-control">
                     <label>Email</label>
                     <br>
                     <input type="email" required name="email" id="email">
@@ -79,11 +89,14 @@
                     <br>
                     <input type="date" required name="birthdate" id="birthdate">
                 </div>
+                <div class="error" id="error-birthdate"></div>
                 <div class="form-control">
-                    <label>País</label>
+                    <label>Foto Frente DNI</label>
                     <br>
-                    <input type="text" name="country" id="country">
+                    <input type="file" name="dni" id="dni" accept=".jpeg, .jpg,.png" onchange="return validarArchivo()">
                 </div>
+                <div class="error" id="error-dni"></div>
+                <div id="visor"></div>
                 <br>
                 <div class="form-terms">
                     <input type="radio" id="terms" name="terms">
