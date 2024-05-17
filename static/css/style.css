@@ -14,7 +14,7 @@ body {
    padding: 0;
    background-color: #ffffff; 
    color: #000000; 
-   font-family: 'open sans';
+   font-family: sans-serif;
 }
 
 header{
@@ -188,7 +188,6 @@ header .img-logo2 {
    margin: 10px 0;
    text-align: left;
 }
-
 .vinos-grid {
    background-color:#5c4f58;
    height: 400px;
@@ -329,4 +328,122 @@ i{
                0 0 45px #0575bb,
                0 0 75px #0575bb,
                0 0 115 #0575bb;
+}
+.pie-pagina {
+   width: auto;
+}
+/* notebooks */
+@media screen and (max-width:1920px) {
+
+}   
+
+/* celulares */
+@media screen and (max-width: 767px){
+   header {
+      position: relative;
+      height: auto;
+      width: auto;
+      background-attachment: scroll;
+   }
+   header .img-logo2 {
+      position: absolute;
+      padding: 10px 0;
+      top: 0;
+      left: 0;
+   }
+   .navegacion {
+      text-align: right;
+      padding: 10px;
+   }
+   .navegacion > a {
+      display: block;
+      margin: 10px 0;
+   }
+   .textos-header {
+      height: auto;
+      padding: 20px;
+   }
+   .textos-header h1 {
+      font-size: 30px;
+   }
+   .textos-header h2 {
+      font-size: 20px;
+   }
+   .contenedor {
+      width: 100%;
+      padding: 20px 0;
+      flex-direction: column;
+   }
+   .container {
+      margin: 20px;
+   }
+   .pie-pagina .grupo-1 {
+      grid-template-columns: 1fr;
+   }
+   .pie-pagina .grupo-1 .box figure img {
+      width: 150px;
+      text-align: center;
+   }
+   figure {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+   }
+   
+  
+}
+
+/* tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+   header {
+      position: relative;
+      height: auto;
+      width: auto;
+      background-attachment: scroll;
+   }
+   header .img-logo2 {
+      position: absolute;
+      padding: 10px 0;
+      top: 0;
+      left: 0;
+   }
+   .navegacion {
+      text-align: right;
+      padding: 10px;
+   }
+   .navegacion > a {
+      display: block;
+      margin: 10px 0;
+   }
+   .textos-header {
+      height: auto;
+      padding: 20px;
+   }
+   .textos-header h1 {
+      font-size: 30px;
+   }
+   .textos-header h2 {
+      font-size: 20px;
+   }
+   .contenedor {
+      width: 100%;
+      padding: 20px 0;
+      flex-direction: column;
+   }
+   .container {
+      margin: 20px;
+   }
+   .pie-pagina .grupo-1 {
+      grid-template-columns: 1fr;
+   }
+   .pie-pagina .grupo-1 .box figure img {
+      width: 150px;
+      text-align: center;
+   }
+   figure {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+   }
+   
 }
