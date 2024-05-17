@@ -52,3 +52,24 @@
       background-size: cover;
    }
 }
+/* celulares */
+@media screen and (max-width: 767px){
+   .flexbox {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      
+   }
+}
+
+/* tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+   .flexbox {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 10px;
+      
+   }
+}
+
+
