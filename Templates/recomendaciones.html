@@ -68,14 +68,15 @@
                 <div class="form-control">
                     <label>Email</label>
                     <br>
-                    <input type="email" required name="email" id="email">
+                    <input type="email" required name="email" id="email" accept="Email">
                 </div>
                 <div class="error" id="error-email"></div>
                 
                 <div class="form-control">
                     <label>Foto</label>
                     <br>
-                    <input type="file" name="dni" id="dni" accept=".jpeg, .jpg,.png" onchange="return validarArchivo()">
+                    <!-- <input type="file" name="dni" id="dni" accept=".jpeg, .jpg,.png" onchange="return validarArchivo()"> -->
+                    <input type="url" name="foto_vino_recomd" id="foto_vino_recomd">
                 </div>
                 <div class="error" id="error-dni"></div>
                 <div id="visor"></div>
