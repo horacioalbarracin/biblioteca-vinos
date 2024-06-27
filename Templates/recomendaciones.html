@@ -11,6 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="../static/css/registro-style.css">
+    <link rel="stylesheet" href="../static/css/recomendaciones.css">
     
 </head>
 
@@ -45,13 +46,13 @@
     </header>
 
     <main>
-        <section class="registro">
+        <section class="recomendaciones">
 
             <h2> RECOMENDACIONES</h2>
             <h3>¿Cuál de nuestros vinos es tu preferido?</h3>
             <br>
             <br>
-            <form action="#" id="formRegister" method="GET" novalidate>
+            <form action="#" id="formRecomendaciones" method="GET" novalidate>
                 <div class="form-control">
                     <label>Nombre</label>
                     <br>
@@ -82,12 +83,27 @@
                 <div id="visor"></div>
                 <br>
                 <br>
-                <button type="submit" class="btn-send">Registrarse</button>
+                <button type="submit" class="btn-send">Recomedar</button>
             </form>
-
         </section>
+        <section id="list" class="container">
+            <h3 class="list-vinos">Listado de vinos recomendados</h3>
+            <table id="list-table-vinos" class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Vino</th>
+                        <th>Email</th>
+                        <th>Foto</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-list-vinos">
+                    
+                </tbody>
+            </table>
+        </section>  
     </main>
-    <script src="../static/Js/registro.js"></script>
+    
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
