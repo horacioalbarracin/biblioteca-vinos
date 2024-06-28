@@ -31,8 +31,8 @@ function showVinos(){
                             <img src="${vino.foto_vino_recomd}" alt="${vino.vinoname}" width="30%">
                         </td>
                         <td>
-                            <button class="btn-send" onclick='updateVino(${vino.id})'><i class="fa fa-pencil" ></button></i>
-                            <button class="btn-send" onclick='deleteVino(${vino.id})'><i class="fa fa-trash" ></button></i>
+                            <button class="btn-save-vino" onclick='updateVino(${vino.id})'><i class="fa fa-pencil" ></button></i>
+                            <button class="btn-save-vino" onclick='deleteVino(${vino.id})'><i class="fa fa-trash" ></button></i>
                         </td>
                     </tr>
         `;
@@ -163,7 +163,7 @@ function deleteVino(vinoId){
 // NOS ASEGURAMOS QUE SE CARGUE EL CONTENIDO DE LA PAGINA EN EL DOM
 document.addEventListener('DOMContentLoaded',function(){
 
-    const btnSaveVino = document.querySelector('#btn-send');
+    const btnSaveVino = document.querySelector('#btn-save-vino');
 
     //ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
     btnSaveVino.addEventListener('click',saveVinos);
