@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Biblioteca del Vino - Registro</title>
+    <title>La Biblioteca del Vino - Recomendaciones</title>
     <link rel="icon" href="../static/img/logo/wine-glass-svgrepo-com.svg" type="image/x-icon">
     <link rel="stylesheet" href="../static/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="../static/css/registro-style.css">
+    <link rel="stylesheet" href="../static/css/recomendaciones.css">
     
 </head>
 
@@ -45,13 +46,13 @@
     </header>
 
     <main>
-        <section class="registro">
+        <section class="recomendaciones">
 
             <h2> RECOMENDACIONES</h2>
-            <h3>¿Cuál de nuestros vinos es tu preferido?</h3>
+            <h3>Ayudanos recomendando tu vino favorito</h3>
             <br>
             <br>
-            <form action="#" id="formRegister" method="GET" novalidate>
+            <form action="#" id="formRecomendaciones" method="GET" novalidate>
                 <div class="form-control">
                     <label>Nombre</label>
                     <br>
@@ -61,32 +62,51 @@
                 <div class="form-control">
                     <label>Nombre del Vino</label>
                     <br>
-                    <input type="text" required name="lastname" id="lastname" maxlength="4" minlength="2">
+                    <input type="text" required name="vinoname" id="vinoname" maxlength="50" minlength="2">
                 </div>
-                <div class="error" id="error-lastname"></div>
+                <div class="error" id="error-vinoname"></div>
                 
                 <div class="form-control">
-                    <label>Email</label>
+                    <label>Año del vino</label>
                     <br>
-                    <input type="email" required name="email" id="email">
+                    <input type="date" required name="year_wine" id="year_wine" accept="date">
                 </div>
-                <div class="error" id="error-email"></div>
+                <div class="error" id="error-year_wine"></div>
                 
                 <div class="form-control">
-                    <label>Foto</label>
+                    <label>Foto URL</label>
                     <br>
-                    <input type="file" name="dni" id="dni" accept=".jpeg, .jpg,.png" onchange="return validarArchivo()">
+                    <!-- <input type="file" name="dni" id="dni" accept=".jpeg, .jpg,.png" onchange="return validarArchivo()"> -->
+                    <input type="url" name="foto_vino_recomd" id="foto_vino_recomd">
                 </div>
-                <div class="error" id="error-dni"></div>
-                <div id="visor"></div>
+                <div class="error" id="error-foto_vino_recomd"></div>
+                <input type="hidden"  name="id" id="id-vino">
+                <!-- <div id="visor"></div> -->
                 <br>
                 <br>
-                <button type="submit" class="btn-send">Registrarse</button>
+                <button type="submit" class="btn-send" id="btn-save-vino">Recomendar</button>
             </form>
-
         </section>
+        <section id="list" class="container">
+            <h3 class="list-vinos">Listado de vinos recomendados</h3>
+            <table id="list-table-vinos" class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Vino</th>
+                        <th>Año del vino</th>
+                        <th>Foto</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-table-vinos">
+                    
+                </tbody>
+            </table>
+        </section>  
     </main>
-    <script src="../static/Js/registro.js"></script>
+    <script src="../static/Js/recomendaciones.js"></script>
+    <script src="../static/Js/recomendaciones-fetch.js"></script> 
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">

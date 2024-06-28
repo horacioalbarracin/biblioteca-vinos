@@ -1,0 +1,49 @@
+.recomendaciones {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px 20px;
+    background-color: var(--select-background-color);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+ }
+ #list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.table {
+    margin: 30px 0px;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #FFF;
+    vertical-align: top;
+    border-color: #dee2e6;
+}
+.table th, .table td {
+    padding: 8px; 
+    text-align: center;
+}
+.table th {
+    border-bottom: 1px solid #ffffff;
+}
+.table td{
+    border-bottom: 1px solid #4f4f4f;
+}
+.list-vinos {
+    align-self: center;
+    color: #FFF;
+    font-size: 1.5vw;
+}
+.btn-save-vino{
+    background-color: var(--primary-color);
+    padding: 0px;
+    border-radius: 50px;
+    color:#FFF;
+    cursor: pointer;
+    font-size: 2vh;
+}
+.btn-save-vino:hover{
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
