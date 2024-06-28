@@ -20,14 +20,16 @@
     vertical-align: top;
     border-color: #dee2e6;
 }
-.table th {
+.table th, .table td {
     padding: 8px; 
     text-align: center;
 }
 .table th {
     border-bottom: 1px solid #ffffff;
 }
-
+.table td{
+    border-bottom: 1px solid #4f4f4f;
+}
 .list-vinos {
     align-self: center;
     color: #FFF;

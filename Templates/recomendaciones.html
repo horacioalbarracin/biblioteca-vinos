@@ -49,7 +49,7 @@
         <section class="recomendaciones">
 
             <h2> RECOMENDACIONES</h2>
-            <h3>Ayudanos recomendando tu vino preferido</h3>
+            <h3>Ayudanos recomendando tu vino favorito</h3>
             <br>
             <br>
             <form action="#" id="formRecomendaciones" method="GET" novalidate>
@@ -62,28 +62,28 @@
                 <div class="form-control">
                     <label>Nombre del Vino</label>
                     <br>
-                    <input type="text" required name="lastname" id="lastname" maxlength="4" minlength="2">
+                    <input type="text" required name="vinoname" id="vinoname" maxlength="50" minlength="2">
                 </div>
-                <div class="error" id="error-lastname"></div>
+                <div class="error" id="error-vinoname"></div>
                 
                 <div class="form-control">
                     <label>Año del vino</label>
                     <br>
                     <input type="date" required name="year_wine" id="year_wine" accept="date">
                 </div>
-                <div class="error" id="error-email"></div>
+                <div class="error" id="error-year_wine"></div>
                 
                 <div class="form-control">
-                    <label>Foto</label>
+                    <label>Foto URL</label>
                     <br>
                     <!-- <input type="file" name="dni" id="dni" accept=".jpeg, .jpg,.png" onchange="return validarArchivo()"> -->
                     <input type="url" name="foto_vino_recomd" id="foto_vino_recomd">
                 </div>
-                <div class="error" id="error-dni"></div>
+                <div class="error" id="error-foto_vino_recomd"></div>
                 <div id="visor"></div>
                 <br>
                 <br>
-                <button type="submit" class="btn-send">Recomedar</button>
+                <button type="submit" class="btn-send">Recomendar</button>
             </form>
         </section>
         <section id="list" class="container">
@@ -103,7 +103,7 @@
             </table>
         </section>  
     </main>
-    
+    <script src="../static/Js/recomendaciones.js"></script>
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
