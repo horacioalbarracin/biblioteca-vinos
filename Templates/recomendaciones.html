@@ -80,10 +80,11 @@
                     <input type="url" name="foto_vino_recomd" id="foto_vino_recomd">
                 </div>
                 <div class="error" id="error-foto_vino_recomd"></div>
+                <input type="hidden"  name="id" id="id-vino">
                 <div id="visor"></div>
                 <br>
                 <br>
-                <button type="submit" class="btn-send">Recomendar</button>
+                <button type="submit" class="btn-send" id="btn-send">Recomendar</button>
             </form>
         </section>
         <section id="list" class="container">
@@ -95,15 +96,17 @@
                         <th>Vino</th>
                         <th>Año del vino</th>
                         <th>Foto</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="tbody-list-vinos">
+                <tbody id="tbody-table-vinos">
                     
                 </tbody>
             </table>
         </section>  
     </main>
     <script src="../static/Js/recomendaciones.js"></script>
+    <script src="../static/Js/recomendaciones-fetch.js"></script> 
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
