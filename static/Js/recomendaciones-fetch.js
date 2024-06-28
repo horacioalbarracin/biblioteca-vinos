@@ -27,7 +27,6 @@ function showVinos(){
                         <td>${vino.nombre}</td>
                         <td>${vino.vinoname}</td>
                         <td>${vino.year_wine}</td>
-                        <td>${vino.foto_vino_recomd}</td>
                         <td>
                             <img src="${vino.foto_vino_recomd}" alt="${vino.vinoname}" width="30%">
                         </td>
