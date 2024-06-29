@@ -1,11 +1,11 @@
 class Vino{
 
-    constructor(id,nombre,vinoname,year_wine,foto_vino_recomd){
-        this.id=id;
+    constructor(id_vino,nombre,nombre_vino,año_vino,foto){
+        this.id_vino=id_vino;
         this.nombre=nombre;
-        this.vinoname=vinoname;
-        this.year_wine=year_wine;
-        this.foto_vino_recomd=foto_vino_recomd;
+        this.nombre_vino=nombre_vino;
+        this.año_vino=año_vino;
+        this.foto=foto;
         
     }
 
@@ -25,14 +25,14 @@ function showVinos(){
         const tr = `
                     <tr>
                         <td>${vino.nombre}</td>
-                        <td>${vino.vinoname}</td>
-                        <td>${vino.year_wine}</td>
+                        <td>${vino.nombre_vino}</td>
+                        <td>${vino.año_vino}</td>
                         <td>
-                            <img src="${vino.foto_vino_recomd}" alt="${vino.vinoname}" width="30%">
+                            <img src="${vino.foto}" alt="${vino.nombre_vino}" width="30%">
                         </td>
                         <td>
-                            <button class="btn-save-vino" onclick='updateVino(${vino.id})'><i class="fa fa-pencil" ></button></i>
-                            <button class="btn-save-vino" onclick='deleteVino(${vino.id})'><i class="fa fa-trash" ></button></i>
+                            <button class="btn-save-vino" onclick='updateVino(${vino.id_vino})'><i class="fa fa-pencil" ></button></i>
+                            <button class="btn-save-vino" onclick='deleteVino(${vino.id_vino})'><i class="fa fa-trash" ></button></i>
                         </td>
                     </tr>
         `;
@@ -51,37 +51,37 @@ function saveVinos(){
     const form = document.querySelector('#formRecomendaciones');
 
     //obtengo los inputs del formulario
-    const inputId = document.querySelector('#id-vino');
-    const inputnombre = document.querySelector('#firstname');
-    const inputvinoname = document.querySelector('#vinoname');
-    const inputyear_wine = document.querySelector('#year_wine');
-    const inputfoto_vino_recomd = document.querySelector('#foto_vino_recomd');
+    const inputid_vino = document.querySelector('#id-vino');
+    const inputnombre = document.querySelector('#nombre');
+    const inputnombre_vino = document.querySelector('#nombre_vino');
+    const inputaño_vino = document.querySelector('#año_vino');
+    const inputfoto = document.querySelector('#foto');
     
 
     //Realizo una validación simple de acuerdo al contenido del value del input del nombre del vino
-    if(inputvinoname.value.trim() !== ''){
+    if(inputnombre_vino.value.trim() !== ''){
         //Busca en localstorage el item vinos, si no existe asigna el array vacio.
         let vinos = JSON.parse(localStorage.getItem('vinos')) || [];
 
         //Si el input de ID es distinto de vacio, es porque se trata de una acción de UPDATE
-        if(inputId.value!==""){
+        if(inputid_vino.value!==""){
             //Busco dentro del array de vinos el objeto a editar
-            const vinoFind = vinos.find(vino => vino.id == inputId.value);
+            const vinoFind = vinos.find(vino => vino.id_vino == inputid_vino.value);
             //Si existe actualizo el objeto
             if (vinoFind) {
               vinoFind.nombre = inputnombre.value;
-              vinoFind.vinoname = inputvinoname.value;
-              vinoFind.year_wine = inputyear_wine.value;
-              vinoFind.foto_vino_recomd = inputfoto_vino_recomd.value;
+              vinoFind.nombre_vino = inputnombre_vino.value;
+              vinoFind.año_vino = inputaño_vino.value;
+              vinoFind.foto = inputfoto.value;
               
             }
         }else{
             let newVino = new Vino(
                 vinos.length+1,
                 inputnombre.value,
-                inputvinoname.value,
-                inputyear_wine.value,
-                inputfoto_vino_recomd.value,
+                inputnombre_vino.value,
+                inputaño_vino.value,
+                inputfoto.value,
                 
             );
             vinos.push(newVino);
@@ -112,26 +112,26 @@ function saveVinos(){
 /**
  * Function que permite cargar el formulario para editar un vino
  * de acuedo al id del vino
- * @param {number} vinoId id vino que se va a actualizar
+ * @param {number} vinoid id vino que se va a actualizar
  */
-function updateVino(vinoId){
+function updateVino(vinoid){
     let vinos = JSON.parse(localStorage.getItem('vinos'));
     //se utiliza el metodo find para poder asegurarnos que exista un vino con el id que queremos eliminar.
-    let vinoToUpdate = vinos.find(vino => vino.id===vinoId);
+    let vinoToUpdate = vinos.find(vino => vino.id_vino===vinoid);
     if(vinoToUpdate){
         //Se buscan los elementos HTML del input
-        const inputId = document.querySelector('#id-vino');
-        const inputnombre = document.querySelector('#firstname');
-        const inputvinoname = document.querySelector('#vinoname');
-        const inputyear_wine = document.querySelector('#year_wine');
-        const inputfoto_vino_recomd = document.querySelector('#foto_vino_recomd');
+        const inputid_vino = document.querySelector('#id-vino');
+        const inputnombre = document.querySelector('#nombre');
+        const inputnombre_vino = document.querySelector('#nombre_vino');
+        const inputaño_vino = document.querySelector('#año_vino');
+        const inputfoto = document.querySelector('#foto');
         
         //Se cargan los inputs con los valores del vino encontrado
-        inputId.value = vinoToUpdate.id;
+        inputid_vino.value = vinoToUpdate.id_vino;
         inputnombre.value = vinoToUpdate.nombre;
-        inputvinoname.value = vinoToUpdate.vinoname;
-        inputyear_wine.value = vinoToUpdate.year_wine;
-        inputfoto_vino_recomd.value = vinoToUpdate.foto_vino_recomd;
+        inputnombre_vino.value = vinoToUpdate.nombre_vino;
+        inputaño_vino.value = vinoToUpdate.año_vino;
+        inputfoto.value = vinoToUpdate.foto;
         
     }
 }
@@ -139,15 +139,15 @@ function updateVino(vinoId){
 /**
  * Function que permite eliminar un vino del array del localstorage
  * de acuedo al indice del mismo
- * @param {number} vinoId id vino que se va a eliminar
+ * @param {number} vinoid id vino que se va a eliminar
  */
-function deleteVino(vinoId){
+function deleteVino(vinoid){
     let vinos = JSON.parse(localStorage.getItem('vinos'));
     //se utiliza el metodo find para poder asegurarnos que exista un vino con el id que queremos eliminar.
-    let vinoToDelete = vinos.find(vino => vino.id===vinoId);
+    let vinoToDelete = vinos.find(vino => vino.id_vino===vinoid);
     if(vinoToDelete){
         //se utiliza el metodo filter para actualizar el array de vinos, sin tener el elemento encontrado en cuestion.
-        vinos = vinos.filter(vino => vino.id !== vinoToDelete.id);
+        vinos = vinos.filter(vino => vino.id_vino !== vinoToDelete.id_vino);
         //se actualiza el localstorage
         localStorage.setItem('vinos',JSON.stringify(vinos));
         showVinos();
