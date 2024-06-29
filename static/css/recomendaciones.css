@@ -52,5 +52,5 @@
 }
 .btn-save-vino:hover {
     color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
+    border: 2px solid white;
 }
