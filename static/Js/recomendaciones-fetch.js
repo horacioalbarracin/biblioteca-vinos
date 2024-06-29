@@ -112,7 +112,9 @@ function deleteVino(id_vino){
         confirmButtonText: "Eliminar",
     }).then(async (result) => {
         if (result.isConfirmed) {
+          console.log(`Deleting wine with ID: ${id_vino}`);
           let response = await fetchData(`${BASEURL}/api/vinos/${id_vino}`, 'DELETE');
+          console.log(`Response: `, response);
           showVinos();
           Swal.fire(response.message, "", "success");
         }
