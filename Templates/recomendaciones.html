@@ -56,32 +56,30 @@
                 <div class="form-control">
                     <label>Nombre</label>
                     <br>
-                    <input type="text" required name="firstname" id="firstname">
+                    <input type="text" required name="nombre" id="nombre" maxlength="45">
                 </div>
-                <div class="error" id="error-firstname"></div>
+                <div class="error" id="error-nombre"></div>
                 <div class="form-control">
                     <label>Nombre del Vino</label>
                     <br>
-                    <input type="text" required name="vinoname" id="vinoname" maxlength="50" minlength="2">
+                    <input type="text" required name="nombre_vino" id="nombre_vino" maxlength="45" minlength="2">
                 </div>
-                <div class="error" id="error-vinoname"></div>
+                <div class="error" id="error-nombre_vino"></div>
                 
                 <div class="form-control">
                     <label>Año del vino</label>
                     <br>
-                    <input type="date" required name="year_wine" id="year_wine" accept="date">
+                    <input type="number" required name="año_vino" id="año_vino" placeholder="AAAA">
                 </div>
-                <div class="error" id="error-year_wine"></div>
+                <div class="error" id="error-año_vino"></div>
                 
                 <div class="form-control">
                     <label>Foto URL</label>
                     <br>
-                    <!-- <input type="file" name="dni" id="dni" accept=".jpeg, .jpg,.png" onchange="return validarArchivo()"> -->
-                    <input type="url" name="foto_vino_recomd" id="foto_vino_recomd">
+                    <input type="url" name="foto" id="foto">
                 </div>
-                <div class="error" id="error-foto_vino_recomd"></div>
+                <div class="error" id="error-foto"></div>
                 <input type="hidden"  name="id" id="id-vino">
-                <!-- <div id="visor"></div> -->
                 <br>
                 <br>
                 <button type="submit" class="btn-send" id="btn-save-vino">Recomendar</button>
@@ -105,8 +103,11 @@
             </table>
         </section>  
     </main>
-    <script src="../static/Js/recomendaciones.js"></script>
+    <!-- <script src="../static/Js/recomendaciones.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="../static/Js/recomendaciones-carga.js"></script>  -->
     <script src="../static/Js/recomendaciones-fetch.js"></script> 
+
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
